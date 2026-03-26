@@ -25,8 +25,12 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxt/image',
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    'nuxt-gtag'
   ],
+  gtag: {
+    id: 'G-14KNJCX950'
+  },
   postcss: {
     plugins: {
       '@tailwindcss/postcss': {}
