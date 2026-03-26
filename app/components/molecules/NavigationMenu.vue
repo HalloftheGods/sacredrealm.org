@@ -76,16 +76,16 @@ const is7x7Open = ref(true)
       <ActionLink 
         to="https://triforceofthegods.com" 
         target="_blank"
-        class="group flex items-center justify-between gap-3 py-2 px-3 border border-amber-500/20 bg-amber-500/5 hover:bg-amber-500/10 hover:border-amber-500/40 rounded-lg transition-all duration-500 relative overflow-hidden hover:shadow-[0_0_15px_rgba(245,158,11,0.15)] cursor-pointer"
+        class="group flex items-center justify-between gap-3 py-2 px-3 border border-[#d9be6f]/20 bg-[#d9be6f]/5 hover:bg-[#d9be6f]/10 hover:border-[#d9be6f]/40 rounded-lg transition-all duration-500 relative overflow-hidden hover:shadow-[0_0_15px_rgba(217,190,111,0.15)] cursor-pointer"
       >
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#d9be6f]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
         
         <div class="flex items-center gap-3 relative z-10">
-          <UIcon name="i-lucide-triangle" class="w-3.5 h-3.5 text-amber-500 group-hover:text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.8)] transition-all duration-300" />
-          <span class="font-mono font-bold tracking-[0.2em] text-[10px] uppercase group-hover:translate-x-1 transition-transform duration-300 text-amber-500 group-hover:text-amber-400">Triforce of the Gods</span>
+          <UIcon name="i-lucide-triangle" class="w-3.5 h-3.5 text-[#d9be6f] group-hover:text-[#d9be6f] drop-shadow-[0_0_8px_rgba(217,190,111,0.8)] transition-all duration-300" />
+          <span class="font-mono font-bold tracking-[0.2em] text-[10px] uppercase group-hover:translate-x-1 transition-transform duration-300 text-[#d9be6f] group-hover:text-[#d9be6f]">Triforce of the Gods</span>
         </div>
 
-        <UIcon name="i-lucide-external-link" class="w-3 h-3 text-amber-500/50 group-hover:text-amber-400 transition-colors duration-300 relative z-10" />
+        <UIcon name="i-lucide-external-link" class="w-3 h-3 text-[#d9be6f]/50 group-hover:text-[#d9be6f] transition-colors duration-300 relative z-10" />
       </ActionLink>
 
       <ActionLink 

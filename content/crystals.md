@@ -1,5 +1,5 @@
 ---
-title: The Seven Crystals
+title: The Seven Sacred Crystals
 description: The Seven Crystal Lattice Systems
 ---
 

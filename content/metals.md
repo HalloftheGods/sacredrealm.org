@@ -1,5 +1,5 @@
 ---
-title: The Seven Metals
+title: The Seven Core Metals
 description: The Alchemical Metals of Antiquity
 ---
 

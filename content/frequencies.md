@@ -1,5 +1,5 @@
 ---
-title: Seven Frequency Waves
+title: The Seven Frequency Waves
 description: The Prism Spectrum of Visible Light
 ---
 

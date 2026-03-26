@@ -1,5 +1,5 @@
 ---
-title: The Seven Sages
+title: The Seven Subliminal Sages
 description: The Seven Sages and Their Corresponding Celestial Bodies
 ---
 

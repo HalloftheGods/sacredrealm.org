@@ -1,5 +1,5 @@
 ---
-title: The Seven Celestials
+title: The Seven Celestial Days
 description: The Celestial Rhythm of the Week
 ---
 

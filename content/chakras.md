@@ -1,5 +1,5 @@
 ---
-title: The Seven Chakras
+title: The Seven Internal Wheels
 description: The Seven Internal Energy Wheels System
 ---
 

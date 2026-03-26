@@ -1,5 +1,5 @@
 ---
-title: The Seven Keys
+title: The Seven Harmonious Keys
 description: The Sacred Musical Scale and Harmonic Resonance
 ---
 
