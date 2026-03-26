@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  nitro: {
+    preset: 'github-pages'
+  },
   future: {
     compatibilityVersion: 4
   },
