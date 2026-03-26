@@ -1,5 +1,5 @@
 ---
-title: The Seven Subliminal Sages
+title: The Seven Sages of the Sacred Realm
 description: The Seven Sages and Their Corresponding Celestial Bodies
 ---
 

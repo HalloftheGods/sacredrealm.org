@@ -24,9 +24,25 @@ const route = useRoute()
 
 const allTags = computed(() => useResonancesByColor(props.color as RoygbivColor))
 
-const filteredTags = computed(() =>
-  allTags.value.filter(tag => tag.path !== route.path)
-)
+const shortTitle = (title?: string) => {
+  if (!title) return ''
+  const hasColon = title.includes(':')
+  const hasDash = title.includes('-')
+  if (hasColon) return title.split(':')[1]!.trim()
+  if (hasDash) return (title.split('-')[1] ?? title.split('-')[0]!).trim()
+  return title.trim()
+}
+
+const filteredTags = computed(() => {
+  const seenTitles = new Set<string>()
+  return allTags.value.filter(tag => {
+    if (tag.path === route.path) return false
+    const title = shortTitle(tag.title)
+    if (seenTitles.has(title)) return false
+    seenTitles.add(title)
+    return true
+  })
+})
 
 const TAG_STYLES: Record<string, string> = {
   red: 'bg-red-500/10 border-red-500/30 text-red-400 hover:bg-red-500/20 hover:border-red-500/80',
@@ -41,13 +57,4 @@ const TAG_STYLES: Record<string, string> = {
 const tagStyle = computed(() =>
   TAG_STYLES[props.color] || 'bg-white/5 border-white/20 text-white/70 hover:bg-white/10 hover:border-white/40'
 )
-
-const shortTitle = (title?: string) => {
-  if (!title) return ''
-  const hasColon = title.includes(':')
-  const hasDash = title.includes('-')
-  if (hasColon) return title.split(':')[1]!.trim()
-  if (hasDash) return (title.split('-')[1] ?? title.split('-')[0]!).trim()
-  return title.trim()
-}
 </script>

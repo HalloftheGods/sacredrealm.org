@@ -32,7 +32,7 @@ const systemEntries = SYSTEM_KEYS.map(key => {
       <HudPanel
         v-for="entry in systemEntries"
         :key="entry.label"
-        :title="`${entry.label}: ${entry.title}`"
+        :title="entry.title"
         :icon="entry.icon"
         :color="color"
         status="nominal"

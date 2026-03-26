@@ -9,9 +9,11 @@ const props = withDefaults(defineProps<{
   status?: 'nominal' | 'warning' | 'critical' | 'offline'
   icon?: string
   color?: 'amber' | 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'indigo' | 'violet'
+  disableExpand?: boolean
 }>(), {
   status: 'nominal',
-  color: 'amber'
+  color: 'amber',
+  disableExpand: false
 })
 
 const statusConfig = {
@@ -133,12 +135,12 @@ onUnmounted(() => {
 
       <div 
         ref="cardRef"
-        @click="!isActive && toggleActive()"
+        @click="!isActive && !disableExpand && toggleActive()"
         :class="[
           'bg-grimoire-ink/10 backdrop-blur-md border border-solid p-5 sm:p-6 transition-all duration-700 not-prose',
           isActive 
             ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[110] w-[95vw] md:w-[800px] lg:w-[960px] xl:w-[1024px] max-w-6xl max-h-[90vh] overflow-y-auto overflow-x-hidden shadow-[0_0_80px_rgba(0,0,0,0.9)] m-0 cursor-default rounded-lg custom-scrollbar' 
-            : 'relative mb-6 lg:mb-8 cursor-pointer overflow-hidden group',
+            : `relative mb-6 lg:mb-8 overflow-hidden group ${(!disableExpand) ? 'cursor-pointer' : ''}`,
           currentConfig.border, 
           currentTheme.container
         ]"
@@ -164,7 +166,7 @@ onUnmounted(() => {
       />
     </div>
     <!-- Header -->
-    <div v-if="title || icon" :class="['flex flex-wrap items-center justify-between border-b pb-3 mb-4 relative z-10 w-full', currentTheme.divider]">
+    <div v-if="title" :class="['flex flex-wrap items-start justify-between border-b pb-3 mb-4 relative z-10 w-full gap-4', currentTheme.divider]">
       <div class="flex items-center gap-2">
         <UIcon v-if="icon" :name="icon" :class="['w-4 h-4 relative z-10', currentTheme.icon]" />
         <h4 :class="['text-[11px] font-mono uppercase tracking-[0.2em] m-0 relative z-10', currentTheme.title]">{{ title }}</h4>
