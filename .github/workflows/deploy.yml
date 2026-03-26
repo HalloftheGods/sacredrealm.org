@@ -44,6 +44,15 @@ jobs:
         with:
           node-version: 22
           cache: 'pnpm'
+          
+      - name: Cache Nuxt Build
+        uses: actions/cache@v4
+        with:
+          path: .nuxt
+          key: ${{ runner.os }}-nuxt-${{ hashFiles('package.json', 'pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-
+            
       - name: Install dependencies & Build
         run: |
           pnpm install --frozen-lockfile
