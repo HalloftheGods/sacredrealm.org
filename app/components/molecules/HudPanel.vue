@@ -169,8 +169,8 @@ onUnmounted(() => {
         <UIcon v-if="icon" :name="icon" :class="['w-4 h-4 relative z-10', currentTheme.icon]" />
         <h4 :class="['text-[11px] font-mono uppercase tracking-[0.2em] m-0 relative z-10', currentTheme.title]">{{ title }}</h4>
       </div>
-      <div :class="['text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 border border-current rounded-sm shadow-inner relative z-10', currentConfig.text]">
-        {{ currentConfig.label }}
+      <div class="flex flex-wrap flex-1 justify-end">
+        <SystemTags v-if="color && color !== 'amber'" :color="color" />
       </div>
     </div>
 
@@ -179,8 +179,7 @@ onUnmounted(() => {
       <slot />
     </div>
     
-    <!-- Related Systems Auto-Tags -->
-    <SystemTags v-if="color && color !== 'amber'" :color="color" />
+    
 
     <!-- Subtle gradient wash -->
     <div :class="['absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t to-transparent pointer-events-none mix-blend-screen opacity-30', currentTheme.wash]"></div>

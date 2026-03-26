@@ -1,11 +1,10 @@
 <template>
-  <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/10 system-tags relative z-20">
-    <div class="w-full text-[9px] uppercase tracking-widest text-white/40 mb-1">Cross-System Resonances:</div>
+  <div class="flex flex-wrap items-center justify-end gap-1.5 relative z-20">
     <NuxtLink
       v-for="tag in filteredTags"
       :key="tag.path + tag.title"
       :to="tag.path"
-      class="inline-flex items-center gap-1.5 px-2 py-1 text-[10px] sm:text-xs font-mono rounded border transition-colors duration-300 backdrop-blur-sm"
+      class="inline-flex items-center gap-1.5 px-2 py-1 text-[10px] font-mono uppercase tracking-widest rounded-sm border shadow-inner transition-all duration-300 backdrop-blur-sm opacity-60 hover:opacity-100 hover:scale-105"
       :class="tagStyle"
     >
       <UIcon :name="tag.icon" class="w-3 h-3" />

@@ -100,4 +100,19 @@
   .roygbiv-violet-icon { @apply text-violet-500/80 drop-shadow-[0_0_5px_rgba(139,92,246,0.5)]; }
   .roygbiv-violet-wash { @apply from-violet-500/5; }
   .roygbiv-violet-divider { @apply border-violet-500/10; }
+
+  /* Sexy Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(197, 160, 89, 0.2);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(197, 160, 89, 0.5);
+  }
 }

@@ -132,21 +132,4 @@ const fadeOpacity = computed(() => ({
     --tw-prose-th-borders: var(--color-grimoire-gold);
     --tw-prose-td-borders: var(--color-grimoire-gold);
   }
-
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(197, 160, 89, 0.2);
-    border-radius: 10px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(197, 160, 89, 0.5);
-  }
 </style>
