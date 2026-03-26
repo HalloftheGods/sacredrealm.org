@@ -33,5 +33,36 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  sourcemap: false,
+  vite: {
+    $client: {
+      build: {
+        rollupOptions: {
+          onwarn(warning, defaultHandler) {
+            if (warning.message && warning.message.includes('Sourcemap is likely to be incorrect')) return;
+            defaultHandler(warning);
+          },
+          onLog(level, log, defaultHandler) {
+            if (log.message && log.message.includes('Sourcemap is likely to be incorrect')) return;
+            defaultHandler(level, log);
+          }
+        }
+      }
+    },
+    $server: {
+      build: {
+        rollupOptions: {
+          onwarn(warning, defaultHandler) {
+            if (warning.message && warning.message.includes('Sourcemap is likely to be incorrect')) return;
+            defaultHandler(warning);
+          },
+          onLog(level, log, defaultHandler) {
+            if (log.message && log.message.includes('Sourcemap is likely to be incorrect')) return;
+            defaultHandler(level, log);
+          }
+        }
+      }
+    }
+  }
 })
