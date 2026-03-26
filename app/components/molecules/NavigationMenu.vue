@@ -7,7 +7,7 @@ const is7x7Open = ref(true)
 <template>
   <ContainerBox
     tag="nav"
-    class="flex flex-col gap-1 text-xs tracking-[0.2em] font-mono text-grimoire-gold/60 uppercase"
+    class="flex flex-col gap-1 text-xs tracking-[0.2em] font-mono text-grimoire-gold/60 uppercase overflow-y-auto custom-scrollbar pr-2 pb-4"
   >
     <NavActionLink to="/">Daily Doctrine</NavActionLink>
     <NavActionLink to="/manifesto">Manifesto</NavActionLink>
