@@ -382,6 +382,22 @@ const useDailyDoctrine = (): DailyResonance => {
   return SACRED_MATRIX[celestialIndex]!
 }
 
+const getEntryId = (key: SystemKey, title: string): string => {
+  if (!title) return ''
+  
+  if (key === 'day') {
+    return title.split(':')[0]?.toLowerCase() || ''
+  }
+  if (key === 'sage') {
+    return title.split(':')[0]?.replace('Sage of ', '').toLowerCase() || ''
+  }
+  
+  // For most other types (chakra, crystal, metal, key, frequency), the ID is the first word.
+  // E.g., "Root (Muladhara)" -> "root", "Solar Plexus" -> "solar", "Third Eye" -> "third"
+  const firstPart = title.split(' (')[0] || title
+  return firstPart.split(' ')[0]?.toLowerCase() || ''
+}
+
 const useResonancesByColor = (color: RoygbivColor) => {
   const resonance = SACRED_MATRIX.find(r => r.color === color)
   if (!resonance) return []
@@ -389,7 +405,8 @@ const useResonancesByColor = (color: RoygbivColor) => {
   return SYSTEM_KEYS.map(systemKey => {
     const entry = resonance[systemKey]
     const meta = SYSTEM_LABELS[systemKey]
-    return { title: entry.title, icon: entry.icon, path: meta.path, category: meta.label }
+    const id = getEntryId(systemKey, entry.title)
+    return { title: entry.title, icon: entry.icon, path: `${meta.path}/${id}`, category: meta.label }
   })
 }
 
@@ -399,6 +416,7 @@ export {
   SYSTEM_LABELS,
   useDailyDoctrine,
   useResonancesByColor,
+  getEntryId,
 }
 
 export type {

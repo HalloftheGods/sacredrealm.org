@@ -16,9 +16,9 @@ Welcome to the **Sacred Realm**. This is not a static wiki, but a living text, a
 
 Our systems are built on principles of:
 
-- **Sovereignty** :doctrine-badge{label="Primary" icon="i-lucide-crown"}
-- **Resilience** :doctrine-badge{label="Core" icon="i-lucide-anchor"}
-- **Aesthetics** :doctrine-badge{label="Functional" icon="i-lucide-palette"}
+- **Sovereignty** :doctrine-badge{label="Primary" icon="i-lucide-crown" to="/manifesto"}
+- **Resilience** :doctrine-badge{label="Core" icon="i-lucide-anchor" to="/about"}
+- **Aesthetics** :doctrine-badge{label="Functional" icon="i-lucide-palette" to="/nexus"}
 
 ::runic-divider{icon="i-lucide-fingerprint"}
 ::

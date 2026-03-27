@@ -25,9 +25,9 @@ description: The central command hub and intersection of community operations.
 ::hud-grid
   ::hud-panel{id="database-link" title="Database Link" status="nominal" icon="i-lucide-database"}
     Connecting to Sacred Hall Archives...
-    - :doctrine-badge{label="Active" icon="i-lucide-radio"} **Comms Relay**
-    - :doctrine-badge{label="Synched" icon="i-lucide-check-circle"} **Data Archive**
-    - :doctrine-badge{label="Online" icon="i-lucide-anvil"} **Construct Forge**
+    - :doctrine-badge{label="Active" icon="i-lucide-radio" to="https://discord.gg/tnUYAJbJuH"} **Comms Relay**
+    - :doctrine-badge{label="Synched" icon="i-lucide-check-circle" to="https://triforceofthegods.com"} **Data Archive**
+    - :doctrine-badge{label="Online" icon="i-lucide-anvil" to="https://glowitheflow.com"} **Construct Forge**
   ::
   
   ::hud-panel{id="security-sector" title="Security Sector" status="warning" icon="i-lucide-shield"}

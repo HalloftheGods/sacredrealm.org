@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDailyDoctrine, SYSTEM_KEYS, SYSTEM_LABELS, SACRED_MATRIX } from '~/composables/sacredMatrix'
+import { useDailyDoctrine, SYSTEM_KEYS, SYSTEM_LABELS, getEntryId, type SystemEntry } from '~/composables/sacredMatrix'
 
 const today = useDailyDoctrine()
 const { dayName, celestial, color } = today
@@ -8,21 +8,7 @@ const systemEntries = SYSTEM_KEYS.map(key => {
   const entry = today[key] as SystemEntry
   const meta = SYSTEM_LABELS[key]
   
-  let id = ''
-  const t = entry?.title || ''
-  
-  if (key === 'day') {
-    id = t.split(':')[0]?.toLowerCase() ?? ''
-  } else if (key === 'chakra' || key === 'crystal' || key === 'key' || key === 'metal') {
-    const part = t.split(': ')[1]
-    id = part?.split(' ')[0]?.toLowerCase() ?? ''
-  } else if (key === 'frequency') {
-    id = t.split(': ')[1]?.toLowerCase() ?? ''
-  } else if (key === 'sage') {
-    id = (t.split(':')[0]?.replace('Sage of ', '') ?? '').toLowerCase()
-  } else {
-    id = t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-  }
+  const id = getEntryId(key, entry?.title || '')
 
   return { 
     ...entry,
