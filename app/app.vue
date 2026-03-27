@@ -6,7 +6,7 @@ useHead({
     return titleChunk ? `${titleChunk} | Sacred Realm` : 'Sacred Realm | The Golden Land'
   },
   link: [
-    { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap' }
@@ -34,8 +34,7 @@ useHead({
 </template>
 
 <style>
-@import "~/assets/css/main.css";
-
+@reference "~/assets/css/main.css";
 /* System-wide overrides */
 ::selection {
   @apply bg-grimoire-gold/30 text-grimoire-parchment;

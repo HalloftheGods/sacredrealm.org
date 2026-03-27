@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { version } from '../../../package.json'
-
 const emit = defineEmits<{ reveal: [active: boolean] }>()
 </script>
 

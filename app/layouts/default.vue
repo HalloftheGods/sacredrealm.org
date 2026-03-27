@@ -43,8 +43,10 @@ const fadeOpacity = computed(() => ({
       <div
         id="site-container"
         :style="panelStyle"
-        class="w-full h-full flex flex-col md:flex-row rounded-none sm:rounded-3xl border-0 sm:border border-grimoire-gold/20 shadow-2xl overflow-hidden pointer-events-auto"
+        class="w-full h-full flex flex-col md:flex-row rounded-none sm:rounded-3xl border-0 sm:border border-grimoire-gold/20 shadow-2xl overflow-hidden pointer-events-auto relative"
       >
+        <!-- Site Container Background Image -->
+        <div class="absolute inset-0 pointer-events-none bg-[url('/logo.png')] bg-no-repeat bg-center opacity-5 z-0"></div>
 
         <!-- Nexus Sidebar -->
         <ContainerBox
@@ -89,6 +91,7 @@ const fadeOpacity = computed(() => ({
           :style="fadeOpacity"
           class="flex-grow h-full overflow-hidden flex flex-col relative"
         >
+
           <!-- Top subtle gradient for depth -->
           <div
             class="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-grimoire-deep/20 to-transparent z-10 pointer-events-none"
@@ -96,7 +99,7 @@ const fadeOpacity = computed(() => ({
 
           <div
             ref="scrollContainer"
-            class="flex-grow h-full overflow-y-auto px-8 py-16 sm:px-16 lg:px-24 scroll-smooth custom-scrollbar"
+            class="flex-grow h-full overflow-y-auto px-8 py-16 sm:px-16 lg:px-24 scroll-smooth custom-scrollbar relative z-10"
           >
             <ContainerBox
               tag="main"

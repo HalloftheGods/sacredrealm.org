@@ -1,7 +1,17 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
+const { data: page } = await useAsyncData(route.path, async () => {
+  const exactPage = await queryCollection('content').path(route.path).first()
+  if (exactPage) return exactPage
+
+  const parts = route.path.split('/').filter(Boolean)
+  if (parts.length > 1) {
+    const parentPath = '/' + parts.slice(0, -1).join('/')
+    const parentPage = await queryCollection('content').path(parentPath).first()
+    return parentPage
+  }
+  
+  return null
 })
 
 useHead({

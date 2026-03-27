@@ -27,5 +27,16 @@
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/postcss": "^4.2.2",
     "tailwindcss": "^4.2.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "vue-demi",
+      "core-js",
+      "esbuild",
+      "sharp",
+      "@parcel/watcher",
+      "unrs-resolver"
+    ]
   }
 }

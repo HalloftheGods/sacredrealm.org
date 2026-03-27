@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="fireGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#cc0000" />
+      <stop offset="30%" stop-color="#ff3300" />
+      <stop offset="60%" stop-color="#ff9900" />
+      <stop offset="90%" stop-color="#ffea00" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <filter id="neonFire" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur2" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur3" />
+      <feMerge>
+        <feMergeNode in="blur3" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="28" fill="#050300" />
+  
+  <!-- Stylized dynamic flame shape -->
+  <path d="M 46 12 
+           C 34 28, 20 42, 20 62 
+           A 30 30 0 0 0 80 62 
+           C 80 48, 72 32, 66 22 
+           C 62 32, 60 38, 56 46 
+           C 53 32, 50 22, 46 12 Z" 
+        fill="url(#fireGlow)" 
+        filter="url(#neonFire)" 
+        opacity="0.9" />
+        
+  <!-- Inner hot core -->
+  <path d="M 48 38 
+           C 40 50, 36 58, 36 68 
+           A 14 14 0 0 0 64 68 
+           C 64 60, 60 50, 54 42 
+           C 52 48, 51 52, 50 56 
+           C 49 48, 48 42, 48 38 Z" 
+        fill="#ffffee" 
+        filter="url(#neonFire)" 
+        opacity="0.8"/>
+</svg>

@@ -5,9 +5,30 @@ const today = useDailyDoctrine()
 const { dayName, celestial, color } = today
 
 const systemEntries = SYSTEM_KEYS.map(key => {
-  const entry = today[key]
+  const entry = today[key] as SystemEntry
   const meta = SYSTEM_LABELS[key]
-  return { title: entry.title, subtitle: entry.subtitle, description: entry.description, icon: entry.icon, label: meta.label, path: meta.path }
+  
+  let id = ''
+  const t = entry?.title || ''
+  
+  if (key === 'day') {
+    id = t.split(':')[0]?.toLowerCase() ?? ''
+  } else if (key === 'chakra' || key === 'crystal' || key === 'key' || key === 'metal') {
+    const part = t.split(': ')[1]
+    id = part?.split(' ')[0]?.toLowerCase() ?? ''
+  } else if (key === 'frequency') {
+    id = t.split(': ')[1]?.toLowerCase() ?? ''
+  } else if (key === 'sage') {
+    id = (t.split(':')[0]?.replace('Sage of ', '') ?? '').toLowerCase()
+  } else {
+    id = t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+  }
+
+  return { 
+    ...entry,
+    label: meta.label, 
+    path: `${meta.path}/${id}`
+  }
 })
 </script>
 
@@ -23,29 +44,34 @@ const systemEntries = SYSTEM_KEYS.map(key => {
       </TextParagraph>
       <ContainerBox class="flex items-center gap-3">
         <HudPanel :color="color" class="!mb-0 !p-2 !px-3 inline-flex">
-          {{ celestial }}
+          {{ celestial }}'s Day
         </HudPanel>
       </ContainerBox>
     </ContainerBox>
 
-    <ContainerBox class="flex flex-col gap-6 w-full not-prose mb-8">
-      <HudPanel
-        v-for="entry in systemEntries"
-        :key="entry.label"
-        :title="entry.title"
-        :icon="entry.icon"
-        :color="color"
-        status="nominal"
-      >
-        <TextParagraph class="font-semibold mb-1">{{ entry.subtitle }}</TextParagraph>
-        <TextParagraph>{{ entry.description }}</TextParagraph>
-        <ActionLink
-          :to="entry.path"
-          class="inline-flex items-center gap-1.5 mt-3 text-[10px] font-mono uppercase tracking-widest opacity-60 hover:opacity-100 transition-opacity"
+    <ContainerBox class="w-full not-prose mb-8">
+      <ul class="list-none flex flex-col gap-6 pl-0">
+        <li
+          v-for="entry in systemEntries"
+          :key="entry.label"
+          :class="['flex flex-col gap-1.5 border-l-2 pl-4 py-2 relative overflow-hidden rounded-r-lg', `roygbiv-${color}-border`]"
         >
-          View Full {{ entry.label }} Lexicon →
-        </ActionLink>
-      </HudPanel>
+          <div :class="['absolute inset-0 bg-gradient-to-r opacity-20', `roygbiv-${color}-wash`]"></div>
+          <div class="flex flex-wrap items-baseline gap-2 relative z-10">
+            <UIcon :name="entry.icon" :class="['w-4 h-4 translate-y-0.5', `roygbiv-${color}-icon`]" />
+            <NuxtLink :to="entry.path" class="font-display font-bold uppercase tracking-widest transition-opacity text-sm sm:text-base hover:opacity-80">
+              <span class="text-grimoire-gold">{{ entry.label }}:</span>
+              <span class="text-white ml-2">{{ entry.title }}</span>
+            </NuxtLink>
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-grimoire-gold opacity-80 ml-1">
+              {{ entry.subtitle }}
+            </span>
+          </div>
+          <TextParagraph class="text-sm sm:text-base opacity-90 leading-relaxed relative z-10 !mb-0 mt-1">
+            {{ entry.description }}
+          </TextParagraph>
+        </li>
+      </ul>
     </ContainerBox>
   </ContainerBox>
 </template>

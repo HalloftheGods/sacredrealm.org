@@ -5,6 +5,7 @@
  * with corner reticles and a scanline effect.
  */
 const props = withDefaults(defineProps<{
+  id?: string
   title?: string
   status?: 'nominal' | 'warning' | 'critical' | 'offline'
   icon?: string
@@ -57,6 +58,8 @@ const currentTheme = computed(() => {
 const isActive = ref(false)
 const cardRef = ref<HTMLElement | null>(null)
 const cardHeight = ref(0)
+const route = useRoute()
+
 const toggleActive = () => {
   const container = document.getElementById('site-container')
   
@@ -72,6 +75,13 @@ const toggleActive = () => {
       container.style.opacity = '0'
       container.style.pointerEvents = 'none'
     }
+
+    if (props.id && !window.location.pathname.endsWith(`/${props.id}`)) {
+      const parts = window.location.pathname.split('/').filter(Boolean)
+      if (parts.length > 0 && parts[parts.length - 1] !== props.id) {
+        history.pushState({}, '', `/${parts[0]}/${props.id}`)
+      }
+    }
   } else {
     isActive.value = false
     
@@ -79,10 +89,46 @@ const toggleActive = () => {
       container.style.opacity = '1'
       container.style.pointerEvents = 'auto'
     }
+
+    if (props.id && window.location.pathname.endsWith(`/${props.id}`)) {
+      const parts = window.location.pathname.split('/').filter(Boolean)
+      if (parts.length > 1) {
+        const parentPath = '/' + parts.slice(0, -1).join('/')
+        history.pushState({}, '', parentPath)
+      }
+    }
   }
 }
 
+const handlePopState = () => {
+  if (isActive.value && props.id && !window.location.pathname.endsWith(`/${props.id}`)) {
+    toggleActive()
+  } else if (!isActive.value && props.id && window.location.pathname.endsWith(`/${props.id}`)) {
+    toggleActive()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('popstate', handlePopState)
+  
+  if (props.id && route.path.endsWith(`/${props.id}`)) {
+    setTimeout(() => {
+      // Open panel if ID matches route without modifying history again since we are just loading
+      const container = document.getElementById('site-container')
+      if (cardRef.value) {
+        cardHeight.value = cardRef.value.getBoundingClientRect().height
+      }
+      isActive.value = true
+      if (container) {
+        container.style.opacity = '0'
+        container.style.pointerEvents = 'none'
+      }
+    }, 50)
+  }
+})
+
 onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
   if (isActive.value) {
     const container = document.getElementById('site-container')
     if (container) {
