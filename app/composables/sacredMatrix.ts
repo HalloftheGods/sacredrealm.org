@@ -116,20 +116,20 @@ const SACRED_MATRIX: DailyResonance[] = [
     },
   },
   {
-    dayName: 'Thursday',
-    celestial: 'Jupiter',
+    dayName: 'Sunday',
+    celestial: 'The Sun',
     color: 'yellow',
     day: {
-      title: 'Thursday: Jupiter',
-      subtitle: 'The Day of Thunder and Expansion',
-      description: 'Under the expansive gaze of Jupiter, Thursday represents growth, abundance, and striking power. A momentous day for expanding your horizons.',
-      icon: 'i-lucide-cloud-lightning',
+      title: 'Sunday: The Sun',
+      subtitle: 'The Day of Light and Vitality',
+      description: 'The week originates with the Sun, the grand luminary. Sunday is a day of illumination, focusing on core vitality, purpose, and radiant energy.',
+      icon: 'i-lucide-sun',
     },
     sage: {
-      title: 'Sage of Thunder: Jupiter',
-      subtitle: "Thursday's Quest",
-      description: 'Embody the powerful, decisive energy of thunder. Set clear intentions, make decisive moves toward personal goals, and harness your personal power responsibly.',
-      icon: 'i-lucide-cloud-lightning',
+      title: 'Sage of Light: Sun',
+      subtitle: "Sunday's Quest",
+      description: 'Embody the qualities of the Sage of Light. Meditate on the nature of light—both literal and metaphorical—and practice spreading illumination in your community.',
+      icon: 'i-lucide-sun',
     },
     chakra: {
       title: 'Solar Plexus (Manipura)',
@@ -144,10 +144,10 @@ const SACRED_MATRIX: DailyResonance[] = [
       icon: 'i-lucide-cuboid',
     },
     metal: {
-      title: 'Tin (Jupiter)',
-      subtitle: 'The Metal of Expansion / Malleability',
-      description: 'Tin is highly pliant and resistant to corrosion. It is the metal of wisdom, preservation, and quiet expansion—a bridge stabilizing other metals when alloyed.',
-      icon: 'i-lucide-expand',
+      title: 'Gold (The Sun)',
+      subtitle: 'The Divine Center / Eternal Perfection',
+      description: 'Gold is the incorruptible metal, refusing to tarnish or decay. It represents the perfected soul, pure enlightenment, and the eternal Sun.',
+      icon: 'i-lucide-sun',
     },
     key: {
       title: 'Mi (Miraculum)',
@@ -210,20 +210,20 @@ const SACRED_MATRIX: DailyResonance[] = [
     },
   },
   {
-    dayName: 'Saturday',
-    celestial: 'Saturn',
+    dayName: 'Thursday',
+    celestial: 'Jupiter',
     color: 'blue',
     day: {
-      title: 'Saturday: Saturn',
-      subtitle: 'The Day of Time and Structure',
-      description: 'Saturn governs time, discipline, boundaries, and long-term synthesis. Saturday represents the culmination of effort and the respect of structure.',
-      icon: 'i-lucide-hourglass',
+      title: 'Thursday: Jupiter',
+      subtitle: 'The Day of Thunder and Expansion',
+      description: 'Under the expansive gaze of Jupiter, Thursday represents growth, abundance, and striking power. A momentous day for expanding your horizons.',
+      icon: 'i-lucide-cloud-lightning',
     },
     sage: {
-      title: 'Sage of Time: Saturn',
-      subtitle: "Saturday's Quest",
-      description: 'Explore the concept of time through mindfulness practices. Stay present, reflect on cyclic nature, and align your time management with spiritual goals.',
-      icon: 'i-lucide-hourglass',
+      title: 'Sage of Thunder: Jupiter',
+      subtitle: "Thursday's Quest",
+      description: 'Embody the powerful, decisive energy of thunder. Set clear intentions, make decisive moves toward personal goals, and harness your personal power responsibly.',
+      icon: 'i-lucide-cloud-lightning',
     },
     chakra: {
       title: 'Throat (Vishuddha)',
@@ -238,10 +238,10 @@ const SACRED_MATRIX: DailyResonance[] = [
       icon: 'i-lucide-triangle',
     },
     metal: {
-      title: 'Lead (Saturn)',
-      subtitle: 'The Prima Materia / Density',
-      description: 'Lead is the heaviest, densest metal—the starting point of the Great Work. It teaches discipline, temporal limitation, and the transmutation of darkness into light.',
-      icon: 'i-lucide-weight',
+      title: 'Tin (Jupiter)',
+      subtitle: 'The Metal of Expansion / Malleability',
+      description: 'Tin is highly pliant and resistant to corrosion. It is the metal of wisdom, preservation, and quiet expansion—a bridge stabilizing other metals when alloyed.',
+      icon: 'i-lucide-expand',
     },
     key: {
       title: 'Sol (Solar)',
@@ -257,20 +257,20 @@ const SACRED_MATRIX: DailyResonance[] = [
     },
   },
   {
-    dayName: 'Sunday',
-    celestial: 'The Sun',
+    dayName: 'Saturday',
+    celestial: 'Saturn',
     color: 'indigo',
     day: {
-      title: 'Sunday: The Sun',
-      subtitle: 'The Day of Light and Vitality',
-      description: 'The week originates with the Sun, the grand luminary. Sunday is a day of illumination, focusing on core vitality, purpose, and radiant energy.',
-      icon: 'i-lucide-sun',
+      title: 'Saturday: Saturn',
+      subtitle: 'The Day of Time and Structure',
+      description: 'Saturn governs time, discipline, boundaries, and long-term synthesis. Saturday represents the culmination of effort and the respect of structure.',
+      icon: 'i-lucide-hourglass',
     },
     sage: {
-      title: 'Sage of Light: Sun',
-      subtitle: "Sunday's Quest",
-      description: 'Embody the qualities of the Sage of Light. Meditate on the nature of light—both literal and metaphorical—and practice spreading illumination in your community.',
-      icon: 'i-lucide-sun',
+      title: 'Sage of Time: Saturn',
+      subtitle: "Saturday's Quest",
+      description: 'Explore the concept of time through mindfulness practices. Stay present, reflect on cyclic nature, and align your time management with spiritual goals.',
+      icon: 'i-lucide-hourglass',
     },
     chakra: {
       title: 'Third Eye (Ajna)',
@@ -285,10 +285,10 @@ const SACRED_MATRIX: DailyResonance[] = [
       icon: 'i-lucide-move',
     },
     metal: {
-      title: 'Gold (The Sun)',
-      subtitle: 'The Divine Center / Eternal Perfection',
-      description: 'Gold is the incorruptible metal, refusing to tarnish or decay. It represents the perfected soul, pure enlightenment, and the eternal Sun.',
-      icon: 'i-lucide-sun',
+      title: 'Lead (Saturn)',
+      subtitle: 'The Prima Materia / Density',
+      description: 'Lead is the heaviest, densest metal—the starting point of the Great Work. It teaches discipline, temporal limitation, and the transmutation of darkness into light.',
+      icon: 'i-lucide-weight',
     },
     key: {
       title: 'La (Labii)',
@@ -353,13 +353,13 @@ const SACRED_MATRIX: DailyResonance[] = [
 ]
 
 const JS_DAY_TO_CELESTIAL_INDEX: Record<number, number> = {
-  0: 5, // Sunday → index 5 (Sun)
+  0: 2, // Sunday → index 2 (Sun)
   1: 6, // Monday → index 6 (Moon)
   2: 0, // Tuesday → index 0 (Mars)
   3: 1, // Wednesday → index 1 (Mercury)
-  4: 2, // Thursday → index 2 (Jupiter)
+  4: 4, // Thursday → index 4 (Jupiter)
   5: 3, // Friday → index 3 (Venus)
-  6: 4, // Saturday → index 4 (Saturn)
+  6: 5, // Saturday → index 5 (Saturn)
 }
 
 const SYSTEM_LABELS: Record<SystemKey, { label: string, path: string }> = {
@@ -377,8 +377,8 @@ const SYSTEM_KEYS = ['metal', 'crystal', 'chakra', 'day', 'key', 'frequency', 's
 type SystemKey = typeof SYSTEM_KEYS[number]
 
 const useDailyDoctrine = (): DailyResonance => {
-  const jsDay = new Date().getDay()
-  const celestialIndex = JS_DAY_TO_CELESTIAL_INDEX[jsDay] ?? 0
+  const jsDay = useState('daily-doctrine-day', () => new Date().getDay())
+  const celestialIndex = JS_DAY_TO_CELESTIAL_INDEX[jsDay.value] ?? 0
   return SACRED_MATRIX[celestialIndex]!
 }
 

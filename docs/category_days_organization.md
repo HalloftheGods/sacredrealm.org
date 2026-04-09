@@ -4,13 +4,13 @@ The Sacred Realm organizes the seven days of the week starting from Tuesday, ref
 
 ## Celestial Rhythm
 
-1. **Tuesday: Mars** (The Day of Fire and Action)
-2. **Wednesday: Mercury** (The Day of Wind and Intellect)
-3. **Thursday: Jupiter** (The Day of Thunder and Expansion)
-4. **Friday: Venus** (The Day of Spirit and Harmony)
-5. **Saturday: Saturn** (The Day of Time and Structure)
-6. **Sunday: The Sun** (The Day of Light and Vitality)
-7. **Monday: The Moon** (The Day of Tides and Reflection)
+1. **Tuesday: Mars** (The Day of Fire and Action / Wave 1)
+2. **Wednesday: Mercury** (The Day of Wind and Intellect / Wave 2)
+3. **Sunday: The Sun** (The Day of Light and Vitality / Wave 3)
+4. **Friday: Venus** (The Day of Spirit and Harmony / Wave 4)
+5. **Thursday: Jupiter** (The Day of Thunder and Expansion / Wave 5)
+6. **Saturday: Saturn** (The Day of Time and Structure / Wave 6)
+7. **Monday: The Moon** (The Day of Tides and Reflection / Wave 7)
 
 ## Alignment
 

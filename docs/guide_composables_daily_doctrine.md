@@ -9,10 +9,10 @@ Powered by the `useDailyDoctrine()` composable (found in `app/composables/sacred
 Due to the esoteric mappings, the order of logic follows a specific progression rather than the typical Monday-Sunday sequence:
 - **Tuesday** (Mars / Red / Root / Iron)
 - **Wednesday** (Mercury / Orange / Sacral / Quicksilver)
-- **Thursday** (Jupiter / Yellow / Solar Plexus / Tin)
+- **Sunday** (The Sun / Yellow / Solar Plexus / Gold)
 - **Friday** (Venus / Green / Heart / Copper)
-- **Saturday** (Saturn / Blue / Throat / Lead)
-- **Sunday** (The Sun / Indigo / Third Eye / Gold)
+- **Thursday** (Jupiter / Blue / Throat / Tin)
+- **Saturday** (Saturn / Indigo / Third Eye / Lead)
 - **Monday** (The Moon / Violet / Crown / Silver)
 
 The `SACRED_MATRIX` pairs the day with its associated ROYGBIV color, celestial body, system entries (Metal, Crystal, Chakra, Day, Key, Frequency, Sage), and custom icons.
